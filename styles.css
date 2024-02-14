@@ -1,0 +1,14 @@
+#container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.childDiv {
+	width: 100px;
+	height: 100px;
+}
+.black {
+	background-color: black;
+}
+.blue {
+	background-color: blue;
+}
