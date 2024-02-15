@@ -1,0 +1,12 @@
+{
+  "name": "ac-exercise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/danielkv/ac-exercise.git",
+  "author": "Daniel K. Guolo <daniel_kv@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jsdom": "^24.0.0",
+    "vitest": "^1.2.2"
+  }
+}
