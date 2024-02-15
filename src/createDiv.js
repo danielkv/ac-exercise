@@ -1,6 +1,4 @@
-
-
-export function createDivs(count) {
+export function createDivs  (count)  {
 	const container = document.getElementById("container")
 
 	for (let i =0; i<count; i++) {

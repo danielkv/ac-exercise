@@ -1,12 +1,19 @@
 {
-  "name": "ac-exercise",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/danielkv/ac-exercise.git",
-  "author": "Daniel K. Guolo <daniel_kv@hotmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "jsdom": "^24.0.0",
-    "vitest": "^1.2.2"
-  }
+	"name": "ac-exercise",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/danielkv/ac-exercise.git",
+	"author": "Daniel K. Guolo <daniel_kv@hotmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"test": "yarn vitest run ./src ",
+		"start": "vite --open",
+		"build": "vite build",
+		"preview": "vite preview "
+	},
+	"devDependencies": {
+		"jsdom": "^24.0.0",
+		"vitest": "^1.2.2",
+		"vite": "^5.1.0"
+	}
 }

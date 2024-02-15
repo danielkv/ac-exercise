@@ -1,12 +1,6 @@
 import { it, expect, vi} from 'vitest'
 import  {createDivs} from './createDiv.js'
-const { JSDOM, VirtualConsole } = require("jsdom");
-
-// const domLoadedAsync = (window) => new Promise((resolve)=>{
-// 	window.addEventListener('DOMContentLoaded',  ()=> {
-// 		resolve(true)
-// 	})
-// })
+const { JSDOM } = require("jsdom");
 
 it('Test the number of child divs', ()=>{
 	const dom = new JSDOM('<div id="container"></div>');
@@ -14,13 +8,13 @@ it('Test the number of child divs', ()=>{
 	
 	createDivs(27)
 
-	//await domLoadedAsync(window)
 	expect(globalThis.document.querySelectorAll(".childDiv").length).eq(27)
 })
 
 it('When click on any child div should toggle the color blue<->black', ()=>{
 	const dom = new JSDOM('<div id="container"></div>');
 	globalThis.document = dom.window.document
+	globalThis.console = { log: vi.fn() }
 	
 	createDivs(3)
 
@@ -39,7 +33,8 @@ it('When click on any child div should toggle the color blue<->black', ()=>{
 it('When click on any child div should toggle ONLY clicked element', ()=>{
 	const dom = new JSDOM('<div id="container"></div>');
 	globalThis.document = dom.window.document
-	
+	globalThis.console = { log: vi.fn() }
+
 	createDivs(5)
 
 	const indexClicked = 1
